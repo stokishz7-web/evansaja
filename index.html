@@ -11,30 +11,171 @@
     padding:0;
     box-sizing:border-box;
     font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
     background:#080808;
     color:#eaeaea;
-    overflow:hidden;
 }
 
-/* NAVBAR */
+/* NAVBAR MOBILE STYLE */
 header{
     position:fixed;
     top:0;
     width:100%;
-    padding:22px 70px;
+    padding:12px 18px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,0.7);
+    background:rgba(0,0,0,0.85);
     backdrop-filter:blur(10px);
     z-index:10;
 }
 
 header h1{
-    letter-spacing:3px;
+    font-size:15px;
+    letter-spacing:2px;
+}
+
+/* MENU */
+nav{
+    display:flex;
+    gap:12px;
+}
+
+nav a{
+    font-size:12px;
+    color:#aaa;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+/* SECTION */
+section{
+    min-height:100vh;
+    padding:90px 20px 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.container{
+    max-width:420px;
+    width:100%;
+}
+
+/* FOTO */
+.profile img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+    filter:grayscale(100%);
+    box-shadow:0 0 25px rgba(255,255,255,0.15);
+}
+
+/* TEXT */
+h2{
+    font-size:26px;
+    margin-bottom:12px;
+}
+
+p{
+    font-size:14px;
+    opacity:.75;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+button{
+    padding:12px 26px;
+    border:none;
+    border-radius:25px;
+    background:#d6d6d6;
+    color:#000;
+    font-weight:600;
+    font-size:14px;
+    cursor:pointer;
+}
+
+button:active{
+    transform:scale(0.96);
+}
+
+/* SECTION COLOR */
+#home{ background:#080808; }
+#about{ background:#0f0f0f; }
+#hobby{ background:#141414; }
+
+/* DESKTOP (opsional biar tetap bagus di PC) */
+@media(min-width:768px){
+    h2{ font-size:36px; }
+    .profile img{
+        width:200px;
+        height:200px;
+    }
+    p{ font-size:16px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>EVAN</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#hobby">Hobby</a>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="container">
+        <div class="profile">
+            <img src="garou.jpg">
+        </div>
+        <h2>Evan Saputra</h2>
+        <p>
+            Selamat datang di laman saya.
+            Ruang sederhana untuk mengenal saya,
+            minat saya, dan perjalanan saya.
+        </p>
+        <a href="#about"><button>Masuk</button></a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>Tentang Saya</h2>
+        <p>
+            Nama saya Evan Saputra.
+            Siswa SMKN 2 Surakarta,
+            kelas XI TJKT-C dan ingin menjadi orang sukses.
+        </p>
+        <a href="#hobby"><button>Lanjut</button></a>
+    </div>
+</section>
+
+<section id="hobby">
+    <div class="container">
+        <h2>Hobi</h2>
+        <p>
+            Hobi saya tergantung dengan apa yang saya ingin lakukan.
+        </p>
+        <a href="#home"><button>Kembali</button></a>
+    </div>
+</section>
+
+</body>
+</html>    letter-spacing:3px;
     font-size:18px;
     color:#cfcfcf;
 }
